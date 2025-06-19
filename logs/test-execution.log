@@ -56,3 +56,9 @@
 [2025-06-19T15:46:16.655Z] [INFO] Assertion passed: Element is visible
 [2025-06-19T15:46:17.012Z] [INFO] Screenshot taken: assertCloseTo-success-2025-06-19T15-46-16-750Z.png
 [2025-06-19T15:46:17.013Z] [INFO] Total Price alanı doğru hesaplanmalı
+[2025-06-19T16:15:21.554Z] [INFO] Screenshot taken: assert-visible-success-2025-06-19T16-15-20-357Z.png
+[2025-06-19T16:15:21.554Z] [INFO] Assertion passed: Element is visible
+[2025-06-19T16:15:22.502Z] [INFO] Screenshot taken: assert-visible-success-2025-06-19T16-15-22-191Z.png
+[2025-06-19T16:15:22.503Z] [INFO] Assertion passed: Element is visible
+[2025-06-19T16:15:22.833Z] [INFO] Screenshot taken: assertCloseTo-success-2025-06-19T16-15-22-602Z.png
+[2025-06-19T16:15:22.835Z] [INFO] Total Price alanı doğru hesaplanmalı
