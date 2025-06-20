@@ -4,6 +4,126 @@
     "elements": [
       {
         "description": "",
+        "id": "paribu-login-validation;login-attempt-with-invalid-credentials-shows-error-message",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Login attempt with invalid credentials shows error message",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 329330100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the login page",
+            "match": {
+              "location": "src\\steps\\LoginSteps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1728984100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I click the Login button in the menu",
+            "match": {
+              "location": "src\\steps\\LoginSteps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 465754900
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Mobile Number",
+                      "Password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "5553188940",
+                      "wrongPass"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I fill in the login form with invalid data",
+            "match": {
+              "location": "src\\steps\\LoginSteps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 255222099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click the Login button",
+            "match": {
+              "location": "src\\steps\\LoginSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113247799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see an error message with text \"Girdiğiniz bilgileri kontrol edin\"",
+            "match": {
+              "location": "src\\steps\\LoginSteps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1194221199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 284679199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "paribu-login-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Paribu Login Validation",
+    "tags": [],
+    "uri": "src\\features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
         "id": "paribu-market-order-calculation;verify-total-price-calculation-on-third-fan-crypto",
         "keyword": "Scenario",
         "line": 7,
@@ -14,7 +134,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 309612699
+              "duration": 307775499
             }
           },
           {
@@ -27,7 +147,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3093351300
+              "duration": 3338760900
             }
           },
           {
@@ -40,7 +160,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 96400399
+              "duration": 76632599
             }
           },
           {
@@ -53,7 +173,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1554492200
+              "duration": 1729155600
             }
           },
           {
@@ -66,7 +186,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 107565700
+              "duration": 121634399
             }
           },
           {
@@ -79,7 +199,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 169412699
+              "duration": 129441999
             }
           },
           {
@@ -92,7 +212,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 669647100
+              "duration": 5646792999
             }
           },
           {
@@ -105,7 +225,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39859000
+              "duration": 40154800
             }
           },
           {
@@ -118,7 +238,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 43226700
+              "duration": 22726699
             }
           },
           {
@@ -131,7 +251,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 247464600
+              "duration": 214355700
             }
           },
           {
@@ -139,7 +259,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 356747400
+              "duration": 498424500
             }
           }
         ],

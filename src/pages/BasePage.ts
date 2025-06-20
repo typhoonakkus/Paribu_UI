@@ -31,9 +31,17 @@ export class BasePage {
 
   // Test datasından key ile değeri getirir
   getTestDataValue(key: string): string {
-  const value = (testData as any)[key];
-    if (value === undefined) {
-      throw new Error(`Test data for key "${key}" not found`);
+    const keys = key.split('.');
+    let value: any = testData;
+    for (const k of keys) {
+      if (value && k in value) {
+        value = value[k];
+      } else {
+        throw new Error(`Test data for key "${key}" not found`);
+      }
+    }
+    if (value === undefined || value === null) {
+      throw new Error(`Test data for key "${key}" is undefined or null`);
     }
     return value.toString();
   }
@@ -41,6 +49,10 @@ export class BasePage {
   // ✅ Ortak fill metodu
   async safeFill(selector: Locator | string, valueOrKey: string, isDataKey = false, timeout = 5000) {
     const value = isDataKey ? this.getTestDataValue(valueOrKey) : valueOrKey;
+
+    if (value === undefined || value === null) {
+      throw new Error(`[safeFill] Value for selector ${selector} is undefined or null`);
+    }
     const locator = this.resolveLocator(selector);
     await locator.waitFor({ state: 'visible', timeout });
     await locator.fill(value);

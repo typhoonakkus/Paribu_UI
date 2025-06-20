@@ -1,5 +1,10 @@
 {
   "quantity": 6,
   "minAmount": 1,
-  "maxAmount": 1000
+  "maxAmount": 1000,
+  "login": {
+    "invalidCountryCode": "+90",
+    "invalidMobileNumber": "1234567890",
+    "invalidPassword": "wrongPass"
+  }
 }
