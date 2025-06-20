@@ -39,27 +39,27 @@ Before(async function () {
 
   browser = await browserLauncher.launch({
     headless: false,
-    args: browserType === 'chromium' ? ['--start-maximized'] : [], // sadece Chromium için
+    args: browserType === 'chromium' ? ['--start-maximized'] : [], 
   });
 
   context = await browser.newContext({
-    viewport: null, // tüm tarayıcılarda gerekli
+    viewport: null, 
     permissions: ['geolocation'],
   });
 
   page = await context.newPage();
 
-  // 👉 Firefox ve WebKit için manuel tam ekran ayarı
+ 
   if (browserType !== 'chromium') {
     await page.setViewportSize({ width: 1920, height: 1080 });
   }
 
-  // Sayfa objelerini oluştur
+
   homePage = new HomePage(page);
   marketPage = new MarketPage(page);
   coinPage = new CoinDetailPage(page);
 
-  // "this" üzerinden senaryolara aktar
+  
   this.page = page;
   this.browser = browser;
   this.homePage = homePage;
@@ -82,7 +82,7 @@ After(async function (scenario) {
     console.log(`[DEBUG] Screenshot captured: ${screenshotPath}`);
   }
 
-  // ✅ Testten sonra tarayıcıyı kapat
+  
   if (this.browser) {
     await this.browser.close();
   }

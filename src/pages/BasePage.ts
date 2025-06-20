@@ -16,7 +16,7 @@ export class BasePage {
   
   // ✅ Çerez banner’ını kapat
   async closeCookies() {
-    const cookieBtn = this.page.getByRole('button', { name: 'Tüm çerezleri kabul et' }); // metin değişebilir
+    const cookieBtn = this.page.getByRole('button', { name: 'Tüm çerezleri kabul et' });
     if (await cookieBtn.isVisible()) {
       await cookieBtn.click();
     }
@@ -159,7 +159,7 @@ export class BasePage {
   // ✅ Screenshot alır
   async takeScreenshot(fileName: string) {
     const now = new Date();
-    const timestamp = now.toISOString().replace(/[:.]/g, '-'); // ISO string’den : ve . işaretlerini - ile değiştiriyoruz
+    const timestamp = now.toISOString().replace(/[:.]/g, '-'); 
     const fileNameWithTimestamp = `${fileName}-${timestamp}.png`;
 
     await this.page.screenshot({

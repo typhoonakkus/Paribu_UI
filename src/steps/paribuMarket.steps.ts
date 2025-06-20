@@ -1,7 +1,7 @@
 import { Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
 import testData from '../test-data/data.json';
 
-setDefaultTimeout(60 * 1000); // 60 saniye timeout
+setDefaultTimeout(60 * 1000); 
 
 let price: number;
 
@@ -41,7 +41,7 @@ When('I enter the current price into the Unit Price field', async function () {
 
 When('I enter {string} as the quantity', async function (dataKey: string) {
   await this.coinPage.enterQuantity(dataKey);
-  this.quantity = parseFloat((testData as any)[dataKey]);  // sonra kullanılmak üzere sakla
+  this.quantity = parseFloat((testData as any)[dataKey]); 
 });
 
 Then('the Total Price should be correctly calculated', async function () {
